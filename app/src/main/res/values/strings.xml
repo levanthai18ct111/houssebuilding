@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">housebuilding</string>
+    <string name="list_house">Nhà Phố</string>
+    <string name="list_house_style">Xây nhà phần thô</string>
+    <string name="list_house_floor">2</string>
+    <string name="list_mong">Móng đài cọc</string>
+    <string name="list_mai">Mái bằng đúc BTCT</string>
+    <string name="title_activity_hien_thi_kq">HienThiKQ</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

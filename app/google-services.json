@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "933453685799",
+    "project_id": "housebuilding-77117",
+    "storage_bucket": "housebuilding-77117.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933453685799:android:59ac10b1de2fee8d38da02",
+        "android_client_info": {
+          "package_name": "housebuilding.example.housebuilding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933453685799-lav08bjhikvh29dhabfit93hlfuor773.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "housebuilding.example.housebuilding",
+            "certificate_hash": "7c4563385706c2bfb0353f5382fae77460397108"
+          }
+        },
+        {
+          "client_id": "933453685799-kd75j0a185qk43epa5rb8io35r4su6ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaMaZWk5O0KZ_fby5SlQGB-f-aUdXAJOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933453685799-kd75j0a185qk43epa5rb8io35r4su6ka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
