@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -29,15 +30,15 @@ public class Caculation extends AppCompatActivity {
 
     AutoCompleteTextView autoCompleteHouse, autoCompleteStyle, autoCompleteFloor,autoCompleteMong, autoCompleteMai;
     TextInputEditText edtWidth, edtHeight;
-
+    TextInputLayout layout_edt6;
     Button cal, reset;
 
     int tong=0;
     TextView tongtien;
-    private double  tong_s_XayDung=0, hinhthicxaynha=0, sotiendutinh=0;
-    private int s_TangTret = 0, s_Lau=0;
+    private double   hinhthicxaynha=0, sotiendutinh=0;
+    private int s_TangTret = 0, s_Lau=0,tong_s_XayDung=0;
     private int  loaimai=0,loaimong=0;
-    private String tenmong="", tenloaimai="", tenhinhthucxaynha="", tennha="";
+    private String tenmong="", tenloaimai="",tol, tenhinhthucxaynha="", tennha="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +60,8 @@ public class Caculation extends AppCompatActivity {
         autoCompleteMong = findViewById(R.id.auto_complete_mong);
         autoCompleteMai = findViewById(R.id.auto_complete_coc);
 
+        layout_edt6 = findViewById(R.id.layout_edt6);
+
         edtWidth = findViewById(R.id.edt_width);
         edtHeight = findViewById(R.id.edt_height);
         tongtien = findViewById(R.id.texttong);
@@ -70,6 +73,11 @@ public class Caculation extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
                 tennha = item;
+                if(item.equals("Nhà cấp bốn")){
+                    layout_edt6.setEnabled(false);
+                }else{
+                    layout_edt6.setEnabled(true);
+                }
             }
         });
 
@@ -87,6 +95,7 @@ public class Caculation extends AppCompatActivity {
                     tenhinhthucxaynha="Phan khong tho";
                 }
                 //double
+
             }
         });
 
@@ -165,30 +174,36 @@ public class Caculation extends AppCompatActivity {
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int dai=Integer.parseInt(edtHeight.getText().toString());
-                int rong=Integer.parseInt(edtWidth.getText().toString());
-                s_TangTret = dai*rong;
-                double s_so_Lau = s_Lau * dai*rong;
-                tong_s_XayDung = s_TangTret+s_Lau+loaimong+loaimong;
-                sotiendutinh = hinhthicxaynha*tong_s_XayDung;
-                Locale localeVN = new Locale("vi", "VN");
-                NumberFormat vn = NumberFormat.getInstance(localeVN);
+                if (edtHeight.getText().toString().equals("")||(edtWidth.getText().toString().equals(""))){
+                    Toast.makeText(getApplicationContext(), "Hãy nhập đủ thông tin", Toast.LENGTH_SHORT).show();
+                }else{
+                    int dai=Integer.parseInt(edtHeight.getText().toString());
+                    int rong=Integer.parseInt(edtWidth.getText().toString());
+                    s_TangTret = dai*rong;
+                    double s_so_Lau = s_Lau * dai*rong;
+                    tong_s_XayDung = s_TangTret+s_TangTret*s_Lau+loaimong+loaimai;
+                    sotiendutinh = hinhthicxaynha*tong_s_XayDung;
+                    Locale localeVN = new Locale("vi", "VN");
+                    NumberFormat vn = NumberFormat.getInstance(localeVN);
 
-                Intent intent = new Intent(getApplicationContext(),HienThiKQ.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("1",String.valueOf(s_TangTret)+"m2");
-                bundle.putString("2",String.valueOf(s_so_Lau));
-                bundle.putString("12",String.valueOf(s_Lau));
-                bundle.putString("3",String.valueOf(tenmong));
-                bundle.putString("4",String.valueOf(loaimong)+"m2");
-                bundle.putString("5",String.valueOf(tenloaimai));
-                bundle.putString("6",String.valueOf(loaimai)+"m2");
-                bundle.putString("7",""+tong_s_XayDung+"m2");
-                bundle.putString("8","Don gia xay nha phan "+tenhinhthucxaynha+" :");
-                bundle.putString("9",String.valueOf(hinhthicxaynha)+"vnd");
-                bundle.putString("10","Chi phi xay nha "+tennha+" xaay nha "+tenhinhthucxaynha+" :");
-                bundle.putString("11",vn.format(sotiendutinh));
-                startActivity(intent.putExtras(bundle));
+                    Intent intent = new Intent(getApplicationContext(),HienThiKQ.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("1",String.valueOf(s_TangTret)+"m2");
+                    bundle.putString("2",String.valueOf(s_so_Lau));
+                    bundle.putString("12",String.valueOf(s_Lau));
+                    bundle.putString("3",String.valueOf(tenmong));
+                    bundle.putString("4",String.valueOf(loaimong)+"m2");
+                    bundle.putString("5",String.valueOf(tenloaimai));
+                    bundle.putString("6",String.valueOf(loaimai)+"m2");
+                    bundle.putString("7",""+tong_s_XayDung+"m2");
+                    bundle.putString("8","Don gia xay nha phan "+tenhinhthucxaynha+" :");
+                    bundle.putString("9",String.valueOf(hinhthicxaynha)+"vnd");
+                    bundle.putString("10","Chi phi xay nha "+tennha+" xaay nha "+tenhinhthucxaynha+" :");
+                    bundle.putString("11",vn.format(sotiendutinh)+"vnd");
+                    bundle.putString("12",tennha);
+                    startActivity(intent.putExtras(bundle));
+                }
+
 
             }
         });

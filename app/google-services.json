@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "933453685799",
+    "firebase_url": "https://housebuilding-77117-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "housebuilding-77117",
     "storage_bucket": "housebuilding-77117.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:933453685799:android:59ac10b1de2fee8d38da02",
+        "mobilesdk_app_id": "1:933453685799:android:56a9972f22a979cd38da02",
         "android_client_info": {
           "package_name": "housebuilding.example.housebuilding"
         }

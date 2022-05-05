@@ -11,6 +11,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import housebuilding.example.housebuilding.databinding.FragmentFirstBinding;
 
+
 public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;

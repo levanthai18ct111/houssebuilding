@@ -22,9 +22,8 @@ public class WebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
 
-        if(getIntent() != null && getIntent().getExtras() != null){
+
             link = getIntent().getExtras().getString("link");
-        }
 
 
         mWebview  = new WebView(this);
@@ -47,7 +46,7 @@ public class WebActivity extends AppCompatActivity {
             }
         });
 
-        Log.d("link_get",link.toString());
+        System.out.println("------------"+link);
         mWebview .loadUrl("https://"+link);
         setContentView(mWebview );
     }

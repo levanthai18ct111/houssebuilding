@@ -7,6 +7,8 @@
     tools:context=".Home"
     android:orientation="vertical">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,45 +17,99 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
-        <Button
-            android:clickable="true"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/btnMauNhaDep"
-            android:textSize="30dp"
-            android:layout_marginBottom="20dp"
-            android:text="MẪU NHÀ ĐẸP"/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
 
-        <Button
-            android:clickable="true"
+            <ImageButton
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:id="@+id/btnMauNhaDep"
+                android:src="@drawable/menu"/>
 
-            android:layout_marginBottom="20dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BÁO XÂY DỰNG"
+                android:textSize="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/btnDuToan"
-            android:textSize="30dp"
-            android:text="DỰ TOÁN CHI PHÍ"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <Button
-            android:clickable="true"
+            <ImageButton
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:id="@+id/btnDuToan"
+                android:src="@drawable/menu1"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DỰ TOÁN XÂY DỰNG"
+                android:textSize="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/btnTimKiemNhaThau"
-            android:textSize="30dp"
-            android:text="TÌM KIẾM NHA THẦU"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:id="@+id/btnTimKiemNhaThau"
+                android:src="@drawable/menu2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TÌM KIẾM NHÀ THẦU"
+                android:textSize="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="Liên hệ"
             android:textColor="@color/black"
             android:layout_gravity="center"/>
 
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -65,14 +121,15 @@
                 android:src="@drawable/ic_fb"/>
 
             <TextView
-                android:layout_marginLeft="30dp"
+                android:id="@+id/fb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="facebook"
-                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"
+                android:text="Van Thai Le"
                 android:textColor="@color/black"
                 android:textSize="25dp"
-                android:id="@+id/fb"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -88,6 +145,7 @@
                 android:src="@drawable/ic_mobile"/>
 
             <TextView
+                android:autoLink="phone"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

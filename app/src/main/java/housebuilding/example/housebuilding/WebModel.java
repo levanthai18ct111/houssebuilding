@@ -3,7 +3,9 @@ package housebuilding.example.housebuilding;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 
-public class WebModel {
+import java.io.Serializable;
+
+public class WebModel implements Serializable {
     private String title,url;
     private int img;
 

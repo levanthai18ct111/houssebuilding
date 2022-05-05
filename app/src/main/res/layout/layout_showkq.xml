@@ -7,37 +7,55 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0B71C3">
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Diện tích tầng trệt: " />
-
-        <TextView
-            android:id="@+id/txt_s_tangtret"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:id="@+id/txt_gia_cuoi_cung"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:text="Kết quả dự toán xây dựng "
+            android:gravity="center"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="184dp"
+            android:layout_height="match_parent"
+            android:text="Diện tích tầng trệt: "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txt_s_tangtret"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#EF0707"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/txt_solau"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tổng diện tích tầng" />
+            android:layout_width="182dp"
+            android:layout_height="match_parent"
+            android:text="Tổng diện tích tầng"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/txt_s_lau"
@@ -47,24 +65,28 @@
             android:text="TextView"
             android:textSize="18dp"
             android:textStyle="bold"
+            android:textColor="#EF0707"
             />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/txt_mong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Móng" />
+            android:layout_width="178dp"
+            android:layout_height="match_parent"
+            android:text="Móng"
+            android:textSize="20dp" />
 
         <TextView
+            android:textColor="#EF0707"
             android:id="@+id/txt_s_mong"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView"
             android:textSize="18dp"
@@ -73,42 +95,48 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/txt_mai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Mái" />
+            android:layout_width="182dp"
+            android:layout_height="match_parent"
+            android:text="Mái"
+            android:textSize="20dp" />
 
         <TextView
+            android:textColor="#EF0707"
             android:id="@+id/txt_s_mai"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/txt_tong_xaydung"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
             android:text="Tổng diện tích xây dựng" />
 
         <TextView
             android:id="@+id/txt_s_tong"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:textColor="#EF0707"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView"
             android:textSize="18dp"
@@ -117,21 +145,23 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/txt_loai_xaydung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Đơn giá phần thô" />
+            android:layout_width="196dp"
+            android:layout_height="match_parent"
+            android:text="Đơn giá "
+            android:textSize="20dp" />
 
         <TextView
+            android:textColor="#EF0707"
             android:id="@+id/txt_gia_loai_xaydung"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView"
             android:textSize="18dp"
@@ -140,24 +170,56 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="30dp"
         android:orientation="horizontal">
-        <TextView
-            android:id="@+id/txt_chi_phi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tổng số tiền dự toán" />
 
         <TextView
-            android:id="@+id/txt_gia_cuoicung"
+            android:id="@+id/txt_chi_phi"
+            android:layout_width="204dp"
+            android:layout_height="match_parent"
+            android:text="Tổng số tiền dự toán"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/st_dutoan"
+            android:textColor="#EF0707"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="Hình ảnh minh họa :"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_minhhoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txt_tenminhhoa"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:text=""
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
     </LinearLayout>
 </LinearLayout>

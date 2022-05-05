@@ -163,12 +163,12 @@
                     android:id="@+id/layout_edt6"
                     android:hint="@string/list_house_floor"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
                     <AutoCompleteTextView
                         android:id="@+id/auto_complete_floor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="none"/>
-
+                        android:inputType="none" />
 
 
                 </com.google.android.material.textfield.TextInputLayout>

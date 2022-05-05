@@ -2,12 +2,14 @@ package housebuilding.example.housebuilding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HienThiKQ extends AppCompatActivity {
 
     private TextView txt_s_tangtret,txt_solau, txt_s_lau,txt_mong, txt_s_mong, txt_mai, txt_s_mai, txt_tong_xaydung, txt_s_tong
             , txt_loai_xaydung, txt_gia_loai_xaydung, txt_chi_phi, txt_gia_cuoicung;
+    ImageView img_minhhoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,8 @@ public class HienThiKQ extends AppCompatActivity {
         String _txt_gia_loai_xaydung =  bundle.getString("9");
         String _txt_chi_phi = bundle.getString("10");
         String _txt_gia_cuoicung =  bundle.getString("11");
+        String _tennha = bundle.getString("12");
+        System.out.println("--------------------"+_tennha);
         // gán giá trị
         txt_s_tangtret.setText(_txt_s_tangtret);
 //        txt_solau.setText(_txt_solau);
@@ -39,6 +43,14 @@ public class HienThiKQ extends AppCompatActivity {
         txt_s_tong.setText(_txt_s_tong);
         txt_s_mai.setText(_txt_s_mai);
 
+        img_minhhoa.setImageResource(R.drawable.hinhnhabietthu);
+        if( _tennha.equalsIgnoreCase("Nhà phố")){
+            img_minhhoa.setImageResource(R.drawable.hinhnhapho);
+        }else if ( _tennha.equalsIgnoreCase("Nhà cấp bốn")){
+            img_minhhoa.setImageResource(R.drawable.hinhnhacapbon);
+        }else if( _tennha.equalsIgnoreCase("Biệt  thự")){
+            img_minhhoa.setImageResource(R.drawable.hinhnhabietthu);
+        }
 
 
         txt_s_mai = findViewById(R.id.txt_s_mai);
@@ -47,9 +59,9 @@ public class HienThiKQ extends AppCompatActivity {
         txt_loai_xaydung = findViewById(R.id.txt_loai_xaydung);
         txt_gia_loai_xaydung = findViewById(R.id.txt_gia_loai_xaydung);
         txt_chi_phi = findViewById(R.id.txt_chi_phi);
-        txt_gia_cuoicung = findViewById(R.id.txt_gia_cuoicung);
-    }
+//        txt_gia_cuoicung = findViewById(R.id.txt_gia_cuoi_cung);
 
+    }
 
 
 
@@ -66,6 +78,7 @@ public class HienThiKQ extends AppCompatActivity {
         txt_loai_xaydung = findViewById(R.id.txt_loai_xaydung);
         txt_gia_loai_xaydung = findViewById(R.id.txt_gia_loai_xaydung);
         txt_chi_phi = findViewById(R.id.txt_chi_phi);
-        txt_gia_cuoicung = findViewById(R.id.txt_gia_cuoicung);
+        txt_gia_cuoicung = findViewById(R.id.st_dutoan);
+        img_minhhoa = findViewById(R.id.img_minhhoa);
     }
 }
