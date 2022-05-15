@@ -2,7 +2,7 @@ package housebuilding.example.housebuilding.model;
 
 public class News {
     private String body , image;
-    int loai ;
+    private  int loai ;
     private String title;
 
     public News() {

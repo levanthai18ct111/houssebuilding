@@ -20,11 +20,11 @@ import java.util.Locale;
 
 public class Caculation extends AppCompatActivity {
 
-    String[] items ={"Nhà phố","Nhà cấp bốn","Biệt  thự"};
+    String[] items ={"Nhà phố","Nhà cấp 4","Biệt  thự"};
     String[] itemStyle ={"Xây nhà phần thô","Xây nhà trọn gói"};
     String[] itemFloor ={"2","3","4","5","6"};
     String[] itemMong ={"Móng đài cọc","Móng bằng","Móng đơn"};
-    String[] itemMai ={"Mái bằng đúc BTCT","Mái lợp tôn lạnh","Mái xà gồ thép lợp ngôi","Mái đúc bằng BTCT lợp ngói"};
+    String[] itemMai ={"Mái bê tông cốt thép","Mái ngói","Mái bê tông dán ngói","Mái tole"};
 
     ArrayAdapter<String> adapter,adapterStyle,adpterFloor,adapterMong,adapterCoc;
 
@@ -118,10 +118,10 @@ public class Caculation extends AppCompatActivity {
                 String item = parent.getItemAtPosition(position).toString();
                 if(item == parent.getItemAtPosition(0)){
                     tenmong ="mong 1";
-                    loaimong = (int) (0.5*(Integer.parseInt(edtHeight.getText().toString())*
+                    loaimong = (int) (0.4*(Integer.parseInt(edtHeight.getText().toString())*
                                                 Integer.parseInt(edtWidth.getText().toString())));
                 } else if (item == parent.getItemAtPosition(1)){
-                    loaimong = (int) (0.55*(Integer.parseInt(edtHeight.getText().toString())*
+                    loaimong = (int) (0.5*(Integer.parseInt(edtHeight.getText().toString())*
                                                 Integer.parseInt(edtWidth.getText().toString())));
                     tenmong = "mong2";
                 } else {
@@ -140,19 +140,19 @@ public class Caculation extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
                 if(item == parent.getItemAtPosition(0)){
-                    loaimai = (int) (0.4*(Integer.parseInt(edtHeight.getText().toString())*
+                    loaimai = (int) (0.5*(Integer.parseInt(edtHeight.getText().toString())*
                                                 Integer.parseInt(edtWidth.getText().toString())));
                     tenloaimai="Loai mai 1";
                 } else if (item == parent.getItemAtPosition(1)){
-                    loaimai = (int) (0.25*(Integer.parseInt(edtHeight.getText().toString())*
+                    loaimai = (int) (0.6*(Integer.parseInt(edtHeight.getText().toString())*
                                                 Integer.parseInt(edtWidth.getText().toString())));
                     tenloaimai="Loai mai 2";
                 } else if (item == parent.getItemAtPosition(2)){
-                    loaimai = (int) (0.7*(Integer.parseInt(edtHeight.getText().toString())*
+                    loaimai = (int) (1*(Integer.parseInt(edtHeight.getText().toString())*
                                                 Integer.parseInt(edtWidth.getText().toString())));
                     tenloaimai="Loai mai 3";
                 }else if (item == parent.getItemAtPosition(3)){
-                    loaimai = (int) (1*(Integer.parseInt(edtHeight.getText().toString())*
+                    loaimai = (int) (0.30*(Integer.parseInt(edtHeight.getText().toString())*
                                                 Integer.parseInt(edtWidth.getText().toString())));
                     tenloaimai="Loai mai 4";
                 }

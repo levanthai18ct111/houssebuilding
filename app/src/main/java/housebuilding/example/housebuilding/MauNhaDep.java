@@ -35,14 +35,15 @@ public class MauNhaDep extends AppCompatActivity {
 
     TabHost tabHost;
 
-    ArrayList<News> dsnew , ds_4 ,  ds_pho , ds_bt;
-    New_adapter adapter,adapter_nha4,adapter_nhapho,adapter_bietthu;
-    ListView lv_all,lv_nha4,lv_nhapho,lv_bietthu;
-    DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
+    ArrayList<News> dsnew , ds_noiThat ,  ds_pho , ds_BietThu, ds_truongHoc;
+    New_adapter adapter,adapter_noiThat,adapter_nhapho,adapter_bietthu, adapter_truongHoc;
+    ListView lv_all,lv_noiThat,lv_nhapho,lv_bietthu, lv_truongHoc;
+    DatabaseReference mData ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mau_nha_dep);
+        mData = FirebaseDatabase.getInstance().getReference();
         addcontroll();
         addevent();
         getdata();
@@ -53,56 +54,69 @@ public class MauNhaDep extends AppCompatActivity {
        mData.child("New").push().setValue(n);
 
 
-//        mData.addValueEventListener(new ValueEventListener() {
-//            @Override
-//           public void onDataChange(@NonNull DataSnapshot snapshot) {
-//               mData.child("Remorqueurs").setValue("aaaaaaaaaaaa");
-//           }
-//
-//           @Override
-//           public void onCancelled(@NonNull DatabaseError error) {
-//
-//           }
-//       });
+
+        mData.addValueEventListener(new ValueEventListener() {
+            @Override
+           public void onDataChange(@NonNull DataSnapshot snapshot) {
+               mData.child("Remorqueurs").setValue("aaaaaaaaaaaa");
+           }
+
+           @Override
+           public void onCancelled(@NonNull DatabaseError error) {
+
+           }
+       });
     }
 
     private void addevent() {
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String s) {
-                if (s.equalsIgnoreCase("ALL")){
+                if (s.equalsIgnoreCase("Công nghiệp")){
                     adapter.notifyDataSetChanged();
 
 
-                }else if (s.equalsIgnoreCase("Nhà cấp bốn")){
-                    adapter_nha4.notifyDataSetChanged();
-                    ds_4.clear();
+                }else if (s.equalsIgnoreCase("Trường học")){
+                    ds_truongHoc.clear();
                     for (int i=0;i<dsnew.size();i++){
-                        if (dsnew.get(i).getLoai()==0){
-                            ds_4.add(dsnew.get(i));
-                adapter_nha4= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_4);
-                lv_nha4.setAdapter(adapter_nha4);
-                adapter_nha4.notifyDataSetChanged();
+                        if (dsnew.get(i).getLoai()==1){
+                            ds_truongHoc.add(dsnew.get(i));
+                            adapter_truongHoc= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_truongHoc);
+                            lv_truongHoc.setAdapter(adapter_truongHoc);
+                            adapter_truongHoc.notifyDataSetChanged();
+                        }
+
+                    }
+                }else if (s.equalsIgnoreCase("Nội thất")){
+                    ds_noiThat.clear();
+                    for (int i=0;i<dsnew.size();i++){
+                        if (dsnew.get(i).getLoai()==2){
+                            ds_noiThat.add(dsnew.get(i));
+                 adapter_noiThat= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_noiThat);
+                lv_noiThat.setAdapter(adapter_nhapho);
+                adapter_noiThat.notifyDataSetChanged();
                         }
                     }
-                }else if (s.equalsIgnoreCase("Nhà phố")){
+                }else if (s.equalsIgnoreCase("Biệt thự")){
+                    ds_BietThu.clear();
+                    for (int i=0;i<dsnew.size();i++){
+                        if (dsnew.get(i).getLoai()==1){
+                            ds_BietThu.add(dsnew.get(i));
+                 adapter_bietthu= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_BietThu);
+                lv_bietthu.setAdapter(adapter_bietthu);
+                adapter_bietthu.notifyDataSetChanged();
+                        }
+                    }
+
+                }
+                else if(s.equalsIgnoreCase("Nhà phố")) {
                     ds_pho.clear();
                     for (int i=0;i<dsnew.size();i++){
                         if (dsnew.get(i).getLoai()==2){
                             ds_pho.add(dsnew.get(i));
-                 adapter_nhapho= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_pho);
-                lv_nhapho.setAdapter(adapter_nhapho);
-                adapter_nhapho.notifyDataSetChanged();
-                        }
-                    }
-                }else if (s.equalsIgnoreCase("Biệt thự")){
-                    ds_bt.clear();
-                    for (int i=0;i<dsnew.size();i++){
-                        if (dsnew.get(i).getLoai()==1){
-                            ds_bt.add(dsnew.get(i));
-                 adapter_bietthu= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_bt);
-                lv_bietthu.setAdapter(adapter_bietthu);
-                adapter_bietthu.notifyDataSetChanged();
+                            adapter_nhapho= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_pho);
+                            lv_nhapho.setAdapter(adapter_nhapho);
+                            adapter_nhapho.notifyDataSetChanged();
                         }
                     }
 
@@ -113,9 +127,10 @@ public class MauNhaDep extends AppCompatActivity {
     }
     private void getdata(){
         dsnew = new ArrayList<>();
-        ds_4 = new ArrayList<>();
+        ds_noiThat = new ArrayList<>();
         ds_pho = new ArrayList<>();
-        ds_bt = new ArrayList<>();
+        ds_BietThu = new ArrayList<>();
+        ds_truongHoc = new ArrayList<>();
        mData.child("New").addChildEventListener(new ChildEventListener() {
            @Override
            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
@@ -157,28 +172,29 @@ public class MauNhaDep extends AppCompatActivity {
         tabHost.setup();
         crearTab();
         lv_all = findViewById(R.id.lv_all);
-        lv_nha4 = findViewById(R.id.lv_cap4);
+        lv_noiThat = findViewById(R.id.lv_cap4);
         lv_nhapho = findViewById(R.id.lv_pho);
         lv_bietthu = findViewById(R.id.lv_biethu);
+        lv_truongHoc = findViewById(R.id.lv_truongHoc);
     }
 
     private void crearTab() {
         TabHost.TabSpec tabAll;
-        tabAll = tabHost.newTabSpec("ALL");
+        tabAll = tabHost.newTabSpec("Công Nghiệp");
         tabAll.setContent(R.id.tab1);
-        tabAll.setIndicator("ALL");
+        tabAll.setIndicator("Công Nghiệp");
         tabHost.addTab(tabAll);
 
         TabHost.TabSpec tabcoffee;
-        tabcoffee = tabHost.newTabSpec("Nhà cấp bốn ");
+        tabcoffee = tabHost.newTabSpec("Trường Học");
         tabcoffee.setContent(R.id.tab2);
-        tabcoffee.setIndicator("Nhà cấp bốn");
+        tabcoffee.setIndicator("Trường Học");
         tabHost.addTab(tabcoffee);
 
         TabHost.TabSpec tabmilkTea;
-        tabmilkTea = tabHost.newTabSpec("Nhà phố");
+        tabmilkTea = tabHost.newTabSpec("Nội thất");
         tabmilkTea.setContent(R.id.tab3);
-        tabmilkTea.setIndicator("Nhà phố");
+        tabmilkTea.setIndicator("Nội thất");
         tabHost.addTab(tabmilkTea);
 
         TabHost.TabSpec tabdirk;
@@ -186,5 +202,19 @@ public class MauNhaDep extends AppCompatActivity {
         tabdirk.setContent(R.id.tab4);
         tabdirk.setIndicator("Biệt thự");
         tabHost.addTab(tabdirk);
+
+        TabHost.TabSpec tabNhaPho;
+        tabNhaPho = tabHost.newTabSpec("Nhà Phố");
+        tabNhaPho.setContent(R.id.tabNhaPho);
+        tabNhaPho.setIndicator("Nhà Phố");
+        tabHost.addTab(tabNhaPho);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        News n = new News("---", "",1 , "");
+        mData.child("New").push().setValue(n);
     }
 }
