@@ -14,15 +14,13 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,6 +28,7 @@ import java.util.Map;
 
 import housebuilding.example.housebuilding.adapter.New_adapter;
 import housebuilding.example.housebuilding.model.News;
+
 
 public class MauNhaDep extends AppCompatActivity {
 
@@ -50,22 +49,28 @@ public class MauNhaDep extends AppCompatActivity {
 
     // Tạo dữ liệu
 
-       News n = new News(" Covid-19 đã thay đổi tâm lý mua bất động sản của người dân. Họ tập trung vào những bất động sản vừa có tiện ích kế cận, đẳng cấp vừa có không gian sống xanh mát, thoáng đạt.  Tuy nhiên, những yêu cầu cao cấp, khắt khe này không phải dễ kiếm mà chỉ những dự án với quy mô khổng lồ mới đáp ứng được. Trường hợp bắt buộc phải nộp thuế", "https://baoxaydung.com.vn/stores/news_dataimages/nga/122021/24/10/in_article/1256_2.jpg", 2, "Những quy định cụ thể về thuế thu nhập cá nhân khi bán nhà đất");
-       mData.child("New").push().setValue(n);
 
 
 
-        mData.addValueEventListener(new ValueEventListener() {
-            @Override
-           public void onDataChange(@NonNull DataSnapshot snapshot) {
-               mData.child("Remorqueurs").setValue("aaaaaaaaaaaa");
-           }
 
-           @Override
-           public void onCancelled(@NonNull DatabaseError error) {
+        News n1 = new News(" ", "https://xaydungvuongan.com/upload/hinhthem/xaydungtruonghoc7831170x103-2603.jpg", 1, "MÔ HÌNH THIẾT KẾ TRƯỜNG HỌC");
+        mData.child("New").push().setValue(n1);
 
-           }
-       });
+
+
+
+
+//        mData.addValueEventListener(new ValueEventListener() {
+//            @Override
+//           public void onDataChange(@NonNull DataSnapshot snapshot) {
+//               mData.child("Remorqueurs").setValue("aaaaaaaaaaaa");
+//           }
+//
+//           @Override
+//           public void onCancelled(@NonNull DatabaseError error) {
+//
+//           }
+//       });
     }
 
     private void addevent() {
@@ -100,7 +105,7 @@ public class MauNhaDep extends AppCompatActivity {
                 }else if (s.equalsIgnoreCase("Biệt thự")){
                     ds_BietThu.clear();
                     for (int i=0;i<dsnew.size();i++){
-                        if (dsnew.get(i).getLoai()==1){
+                        if (dsnew.get(i).getLoai()==3){
                             ds_BietThu.add(dsnew.get(i));
                  adapter_bietthu= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_BietThu);
                 lv_bietthu.setAdapter(adapter_bietthu);
@@ -112,7 +117,7 @@ public class MauNhaDep extends AppCompatActivity {
                 else if(s.equalsIgnoreCase("Nhà phố")) {
                     ds_pho.clear();
                     for (int i=0;i<dsnew.size();i++){
-                        if (dsnew.get(i).getLoai()==2){
+                        if (dsnew.get(i).getLoai()==4){
                             ds_pho.add(dsnew.get(i));
                             adapter_nhapho= new New_adapter(MauNhaDep.this, R.layout.item_news, ds_pho);
                             lv_nhapho.setAdapter(adapter_nhapho);
@@ -214,7 +219,5 @@ public class MauNhaDep extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        News n = new News("---", "",1 , "");
-        mData.child("New").push().setValue(n);
     }
 }
