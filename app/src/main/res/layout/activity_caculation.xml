@@ -4,15 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     tools:context=".Caculation"
     android:orientation="vertical">
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/logo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="VA_Archiment &amp; Contructinon"/>
+        </LinearLayout>
 
         <androidx.core.widget.NestedScrollView
+            android:layout_marginTop="70dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/nestscroll">
@@ -162,6 +179,7 @@
                     android:layout_margin="6dp"
                     android:id="@+id/layout_edt6"
                     android:hint="@string/list_house_floor"
+                    android:visibility="gone"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
                     <AutoCompleteTextView
@@ -169,6 +187,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="none" />
+
 
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -245,13 +264,16 @@
                     <Button
                         android:layout_margin="10dp"
                         android:id="@+id/btn_cal"
+                        android:background="#092EFB"
+                        android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" kết quả"/>
 
                     <Button
+                        android:textColor="@color/white"
                         android:layout_margin="10dp"
-
+                        android:background="#092EFB"
                         android:id="@+id/btn_Reset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

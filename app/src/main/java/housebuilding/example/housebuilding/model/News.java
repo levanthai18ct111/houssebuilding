@@ -4,15 +4,17 @@ public class News {
     private String body , image;
     private  int loai ;
     private String title;
+    private String lh;
 
     public News() {
     }
 
-    public News(String body, String image, int loai, String title) {
+    public News(String body, String image, int loai, String title, String lh) {
         this.body = body;
         this.image = image;
         this.loai = loai;
         this.title = title;
+        this.lh = lh;
     }
 
     public String getBody() {
@@ -47,13 +49,11 @@ public class News {
         this.title = title;
     }
 
-    @Override
-    public String toString() {
-        return "News{" +
-                "body='" + body + '\'' +
-                ", image='" + image + '\'' +
-                ", loai=" + loai +
-                ", title='" + title + '\'' +
-                '}';
+    public String getLh() {
+        return lh;
+    }
+
+    public void setLh(String lh) {
+        this.lh = lh;
     }
 }

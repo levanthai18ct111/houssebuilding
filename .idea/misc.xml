@@ -3,22 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/HouseBuildingInformation01/app/src/main/res/drawable/ic_baseline_add_location_24.xml" value="0.2203125" />
+        <entry key="..\:/HouseBuildingInformation01/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2203125" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_caculation.xml" value="0.25" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_hien_thi_kq.xml" value="0.2" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_item.xml" value="0.18" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_list_news.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_main_admin.xml" value="0.1" />
+        <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_main_news.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_mau_nha_dep.xml" value="0.1" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_read_news.xml" value="0.19010416666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/activity_web.xml" value="0.1" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/content_hien_thi_kq.xml" value="0.20416666666666666" />
+        <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/dialog_login.xml" value="0.18" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/fragment_maps.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/fragment_second.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/item_news.xml" value="0.18" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/item_web.xml" value="0.20416666666666666" />
-        <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/layout_showkq.xml" value="0.22" />
+        <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/layout_showkq.xml" value="0.31851851851851853" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/menu_dropdown.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/tab_all.xml" value="0.20416666666666666" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/tab_bietthu.xml" value="0.20416666666666666" />

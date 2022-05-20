@@ -28,12 +28,13 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="184dp"
+            android:layout_width="215dp"
             android:layout_height="match_parent"
             android:text="Diện tích tầng trệt: "
             android:textSize="20dp" />
 
         <TextView
+            android:gravity="center"
             android:id="@+id/txt_s_tangtret"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -52,12 +53,13 @@
 
         <TextView
             android:id="@+id/txt_solau"
-            android:layout_width="182dp"
+            android:layout_width="214dp"
             android:layout_height="match_parent"
             android:text="Tổng diện tích tầng"
             android:textSize="20dp" />
 
         <TextView
+            android:gravity="center"
             android:id="@+id/txt_s_lau"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,12 +79,13 @@
 
         <TextView
             android:id="@+id/txt_mong"
-            android:layout_width="178dp"
+            android:layout_width="216dp"
             android:layout_height="match_parent"
             android:text="Móng"
             android:textSize="20dp" />
 
         <TextView
+            android:gravity="center"
             android:textColor="#EF0707"
             android:id="@+id/txt_s_mong"
             android:layout_width="wrap_content"
@@ -102,12 +105,13 @@
 
         <TextView
             android:id="@+id/txt_mai"
-            android:layout_width="182dp"
+            android:layout_width="215dp"
             android:layout_height="match_parent"
             android:text="Mái"
             android:textSize="20dp" />
 
         <TextView
+            android:gravity="center"
             android:textColor="#EF0707"
             android:id="@+id/txt_s_mai"
             android:layout_width="wrap_content"
@@ -129,10 +133,11 @@
             android:id="@+id/txt_tong_xaydung"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:textSize="20dp"
-            android:text="Tổng diện tích xây dựng" />
+            android:text="Tổng diện tích xây dựng"
+            android:textSize="20dp" />
 
         <TextView
+            android:gravity="center"
             android:id="@+id/txt_s_tong"
             android:layout_width="wrap_content"
             android:textColor="#EF0707"
@@ -152,12 +157,13 @@
 
         <TextView
             android:id="@+id/txt_loai_xaydung"
-            android:layout_width="196dp"
+            android:layout_width="214dp"
             android:layout_height="match_parent"
             android:text="Đơn giá "
             android:textSize="20dp" />
 
         <TextView
+            android:gravity="center"
             android:textColor="#EF0707"
             android:id="@+id/txt_gia_loai_xaydung"
             android:layout_width="wrap_content"
@@ -183,6 +189,7 @@
             android:textSize="20dp" />
 
         <TextView
+            android:gravity="center"
             android:id="@+id/st_dutoan"
             android:textColor="#EF0707"
             android:layout_width="wrap_content"
