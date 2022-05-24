@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_chitiet"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/teal_700">
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="297dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Chi Tiết Liên Hệ"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="Họ Tên"
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/lh_hoten"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="nd.........."
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="Địa chỉ :"
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/txt_lh_Diachi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="nd.........."
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="Email: "
+            android:textSize="15dp"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/txt_lh_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="nd.........."
+            android:textSize="15dp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="102dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Số điện thoại"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+            <TextView
+                android:id="@+id/txt_lien_sdt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="nd.........."
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="Chủ đề"
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/txt_lh_chude"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="nd.........."
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="Nội dung"
+                android:textSize="15dp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/txt_lh_noidung"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="nd.........."
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -32,6 +32,27 @@
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/tab_truonghoc.xml" value="0.17481884057971014" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/tesswed.xml" value="0.25" />
         <entry key="..\:/HouseBuildingInformation01/app/src/main/res/layout/web_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/drawable/ic_baseline_post_add_24.xml" value="0.124" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_caculation.xml" value="0.1526268115942029" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_item.xml" value="0.25" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main_admin.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main_chitiet.xml" value="0.2" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main_lien_he_nha.xml" value="0.25" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main_lienhe.xml" value="0.25" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main_news.xml" value="0.1359375" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main_nhanthongtinlienhe.xml" value="0.1526268115942029" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_main_poster.xml" value="0.264" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/activity_mau_nha_dep.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/ad_tab_congnghiep.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/ad_tab_nhapho.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/ad_tab_noithat.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/ad_tab_truonghoc.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/ad_tap_bietthu.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/dialog_thongbao.xml" value="0.1526268115942029" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/it_ad_tabhost.xml" value="0.22826086956521738" />
+        <entry key="..\:/lvt/houssebuilding/app/src/main/res/layout/item_lienhe.xml" value="0.2" />
       </map>
     </option>
   </component>

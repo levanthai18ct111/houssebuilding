@@ -1,20 +1,32 @@
 package housebuilding.example.housebuilding.model;
 
 public class News {
+    private String id;
     private String body , image;
     private  int loai ;
     private String title;
     private String lh;
+    private String date;
 
     public News() {
     }
 
-    public News(String body, String image, int loai, String title, String lh) {
+    public News(String id, String body, String image, int loai, String title, String lh, String date) {
+        this.id = id;
         this.body = body;
         this.image = image;
         this.loai = loai;
         this.title = title;
         this.lh = lh;
+        this.date = date;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getBody() {
@@ -55,5 +67,13 @@ public class News {
 
     public void setLh(String lh) {
         this.lh = lh;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

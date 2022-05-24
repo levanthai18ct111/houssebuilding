@@ -16,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Housebuilding">
         <activity
+            android:name=".MainActivity_chitiet"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_lien_he_nha"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_poster"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity_admin"
             android:exported="true" />
         <activity
@@ -35,7 +44,7 @@
             android:label="@string/title_activity_hien_thi_kq"
             android:theme="@style/Theme.Housebuilding.NoActionBar" />
         <activity
-            android:name=".Main_"
+            android:name=".Main_lienhe"
             android:exported="true" />
         <activity
             android:name=".MauNhaDep"

@@ -1,10 +1,7 @@
 package housebuilding.example.housebuilding;
 
-import static com.facebook.FacebookSdk.getApplicationContext;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -23,11 +20,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -37,7 +29,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 import housebuilding.example.housebuilding.model.Admin;
-import housebuilding.example.housebuilding.model.News;
 
 public class Home extends Activity {
     DatabaseReference mData ;
@@ -77,7 +68,7 @@ public class Home extends Activity {
         timKiemNhaThau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Main_.class));
+                startActivity(new Intent(getApplicationContext(), Main_lienhe.class));
 
             }
         });

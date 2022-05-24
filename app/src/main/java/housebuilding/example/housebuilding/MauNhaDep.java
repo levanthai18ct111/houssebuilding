@@ -4,11 +4,13 @@ import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 
 import com.google.firebase.database.ChildEventListener;
@@ -25,6 +28,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +36,7 @@ import java.util.Map;
 import housebuilding.example.housebuilding.adapter.New_adapter;
 import housebuilding.example.housebuilding.model.Admin;
 import housebuilding.example.housebuilding.model.News;
+import java.time.format.DateTimeFormatter;
 
 
 public class MauNhaDep extends AppCompatActivity {
@@ -43,10 +48,14 @@ public class MauNhaDep extends AppCompatActivity {
     ListView lv1,lv2,lv3,lv4,lv5;
     DatabaseReference mData ;
     String img , titile,boddy,lh;
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mau_nha_dep);
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+//        LocalDateTime now = LocalDateTime.now();
+
         mData = FirebaseDatabase.getInstance().getReference();
         ds_th = new ArrayList<>();
         ds_cn = new ArrayList<>();
@@ -70,7 +79,7 @@ public class MauNhaDep extends AppCompatActivity {
 //                "Địa chỉ: Số 170/20/102, Tổ 50A, KP 11, P.Tân Phong, Tp. Biên Hoà, Đồng Nai.\n" +
 //                "Điện thoại: 0979 239 652 - 0969 728 062\n" +
 //                "Email: Xaydungvuongan@gmail.com\n" +
-//                "Website: Xaydungvuongan.com");
+//                "Website: Xaydungvuongan.com",String.valueOf(java.tetime.LocalDa.now()));
 //        mData.child("New").push().setValue(n1);
 
 
@@ -337,4 +346,6 @@ public class MauNhaDep extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
     }
+
+
 }
